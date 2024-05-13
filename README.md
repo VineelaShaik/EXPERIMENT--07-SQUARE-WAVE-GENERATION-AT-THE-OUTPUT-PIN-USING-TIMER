@@ -1,4 +1,4 @@
-# EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER
+# EXPERIMENT--06-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER
 
 ### Aim:
 To generate a PWM wave at the timer pin output and  simuate it on  proteus using an virtual oscilloscope  
@@ -96,7 +96,10 @@ Step14. click on debug and simulate using simulation as shown below
   
 
 ## STM 32 CUBE PROGRAM :
+Developed By:Shanmuga Raj
+Reg.No: 212223040192
 ```
+#include "main.c"
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
@@ -190,13 +193,13 @@ int main(void)
 
   /* USER CODE END 2 */
   HAL_TIM_Base_Start(&htim1);
-  HAL_TIM_PWM_Init(&htim1);
-  HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
+    HAL_TIM_PWM_Init(&htim1);
+    HAL_TIM_PWM_Start(&htim1
+    		,TIM_CHANNEL_1);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  ...........................................................................
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -374,65 +377,44 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 
 
- ## Output screen shots of proteus  :
-![fi](https://github.com/ManojTella/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/94883876/37ca1ece-79ce-48e4-a6d6-da8d9f276bbd)
+## Output screen shots of proteus  :
 
-![image](https://github.com/ManojTella/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/94883876/a722ef28-7030-427f-9089-611f85c0a063)
-
-![Screenshot 2023-05-27 155744](https://github.com/ManojTella/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/94883876/aa69b033-eb48-4540-ab12-97fd37056b1d)
-
-![Screenshot 2023-05-27 160911](https://github.com/ManojTella/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/94883876/907153bb-7a4c-45a1-a41b-c05e5d50e37f)
+![image](https://github.com/K-Shanmugaraj/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/144870425/7f1f587d-9829-491a-b33a-576a2b79b6fd)
 
 
  
+ 
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
- ![Screenshot 2024-05-13 110934](https://github.com/VineelaShaik/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/144340862/17f0d6b7-8a43-4931-948f-ff47e8a4a3b3)
+![WhatsApp Image 2024-05-13 at 11 13 08_9b808161](https://github.com/K-Shanmugaraj/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/144870425/eb2baa1a-ad88-4de1-bc28-48b92a1ff762)
 
+ 
 
 ## DUTY CYCLE AND FREQUENCY CALCULATION 
 ## FOR PULSE AT 500
-Total Time Period=41ms TON = 2ms
 
-TOFF= 2ms
+![500](https://github.com/21005688/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/94747031/661d0e24-2afc-415c-a16e-ed2e51389fb1)
 
-TOTAL TIME =4
-
-FREQUENCY = 1/(TOTAL TIME)
-
-=1/(410^-3)
-
-=250Hz
+TON = 2 TOFF=2 TOTAL TIME = 4 FREQUENCY = 1/(TOTAL TIME) FREQUENCY = 250Hz
 
 ## FOR PULSE AT 700
-Total Time Period=3.11ms
 
-TON = 2.17ms
 
-TOFF=0.93ms
+![700](https://github.com/21005688/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/94747031/c8f3392c-0d44-4dfc-a50c-a3b07ccc07f4)
 
-TOTAL TIME =3.1
+TON = 3 TOFF=1 TOTAL TIME = 4 FREQUENCY = 1/(TOTAL TIME)=250Hz
 
-FREQUENCY = 1/(TOTAL TIME)
-
-=1/(3.110^-3)
-
-=322.58Hz
 
 ## FOR PULSE AT 900
-Total Time Period=3.21ms
 
-TON = 2.88
+![900](https://github.com/21005688/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/94747031/b92c082e-eb09-47c0-bef9-46f4bdd547cb)
 
-TOFF= 0.32
 
-TOTAL TIME = 3.2
-
-FREQUENCY = 1/(TOTAL TIME)
-
-=1/(3.210^-3)
-
-=312.5Hz
+TON = 3.5 TOFF=0.5 TOTAL TIME = 4 FREQUENCY = 1/(TOTAL TIME)=250Hz
 
 
 ## Result :
-A PWM Signal is generated using the following frequency and various duty cycles are simulated
+A PWM Signal is generated using the following frequency and various duty cycles are simulated 
+
+
+
+
